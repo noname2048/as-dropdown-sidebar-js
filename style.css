@@ -27,9 +27,8 @@
 .sidebar .logo-details i {
   font-size: 30px;
   color: #fff;
-  background: red;
   height: 50px;
-  min-height: 78px;
+  min-width: 78px;
   text-align: center;
   line-height: 50px;
 }
@@ -37,9 +36,9 @@
 .sidebar .logo-details .logo-name {
   font-size: 22px;
   color: #fff;
+  font-weight: 600;
 }
 .sidebar .nav-links {
-  background-color: red;
   height: 100%;
   padding-top: 30px;
 }
@@ -47,12 +46,52 @@
 .sidebar .nav-links li {
   position: relative;
   list-style: none;
+  transition: all 0.4s ease;
 }
+
+.sidebar .nav-links li:hover {
+ background: #1d1b31;
+} 
+
+.sidebar .nav-links li .iocn-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sidebar .nav-links li i {
   height: 50px;
-  min-height: 78px;
+  min-width: 78px;
   text-align: center;
   line-height: 50px;
   color: #fff;
-  
+}
+
+.sidebar .nav-links li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar .nav-links li a .link-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+j
+.sidebar .nav-links li .sub-menu {
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background: #1d1b31;
+  /* display: none; */
+}
+
+.sidebar .nav-links li .sub-menu a {
+  color: #fff;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.sidebar.close .nav-links li .sub-menu {
+  position: absolute;
 }
