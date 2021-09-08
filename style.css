@@ -91,6 +91,12 @@
   font-size: 15px;
   padding: 5px 0;
   white-space: nowrap;
+  opacity: 0.6;
+  transition: all 0.3 ease;
+}
+
+.sidebar .nav-links li .sub-menu a:hover {
+  opacity: 1;
 }
 
 .sidebar.close .nav-links li .sub-menu {
@@ -100,4 +106,13 @@
   margin-top: 0;
   padding: 10px 20px;
   border-radius: 0 6px 6px 0;
+}
+.sidebar .nav-links li .sub-menu .link-name {
+  display: none;
+}
+
+.sidebar.close .nav-links li .sub-menu .link-name {
+  font-size: 18px;
+  opacity: 1;
+  display: block;
 }
