@@ -15,7 +15,7 @@
 * html 요소 중 자식에게 hover 가 되어있으면 상위 요소에 hover 이벤트가 들어가는듯
 * pointer-events 와 관련해서 `none` 일경우 링크가 작동하지 않음
   * pointer-events와 opacity를 이용해서 드롭다운을 구현하는게 핵심이였다..!
-* 
+* object-fit: cover; 속성은 화면이 꽉차지만 비율을 변경하지 않는다.
+* position fixed를 bottom으로 주어 화면 아래에 프로필 사진을 구성할 수 있다.
 
 ## 배운점
-
