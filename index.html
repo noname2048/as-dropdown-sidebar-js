@@ -13,7 +13,7 @@
     />
   </head>
   <body>
-    <div class="sidebar close">
+    <div class="sidebar">
       <div class="logo-details">
         <i class="bx bxl-c-plus-plus"></i>
         <span class="logo-name">CodingLab</span>
@@ -34,7 +34,7 @@
               <i class="bx bxs-collection"></i>
               <span class="link-name">Category</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
+            <i class="bx bx-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Category</a></li>
@@ -49,7 +49,7 @@
               <i class="bx bx-book-alt"></i>
               <span class="link-name">Posts</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
+            <i class="bx bx-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Posts</a></li>
@@ -82,7 +82,7 @@
               <i class="bx bx-plug"></i>
               <span class="link-name">Plugins</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
+            <i class="bx bx-chevron-down arrow"></i>
           </div>
           <ul class="sub-menu">
             <li><a class="link-name" href="#">Plugins</a></li>
@@ -97,7 +97,6 @@
               <i class="bx bx-compass"></i>
               <span class="link-name">Explore</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
           </div>
           <ul class="sub-menu blank">
             <li><a class="link-name" href="#">Explore</a></li>
@@ -109,7 +108,6 @@
               <i class="bx bx-history"></i>
               <span class="link-name">History</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
           </div>
           <ul class="sub-menu blank">
             <li><a class="link-name" href="#">History</a></li>
@@ -121,7 +119,6 @@
               <i class="bx bx-cog"></i>
               <span class="link-name">Setting</span>
             </a>
-            <i class="bx bx-chevron-down"></i>
           </div>
           <ul class="sub-menu blank">
             <li><a class="link-name" href="#">Setting</a></li>
@@ -141,5 +138,31 @@
         </li>
       </ul>
     </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class="bx bx-menu"></i>
+        <span class="text">Drop Down Sidebar</span>
+      </div>
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      console.log(arrow);
+
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=> {
+          // console.log(e);
+          let arrowParent = e.target.parentElement.parentElement;
+          console.log(arrowParent);
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+    
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebar);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
   </body>
 </html>
